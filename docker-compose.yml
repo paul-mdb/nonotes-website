@@ -1,0 +1,13 @@
+services:
+  web:
+    build: .
+    container_name: artdraft_website
+    expose:
+      - "80"
+    restart: unless-stopped
+    networks:
+      - proxy_network
+
+networks:
+  proxy_network:
+    external: true
