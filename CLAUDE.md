@@ -76,6 +76,4 @@ Your typical loop:
 
 **Next Steps / TODO:**
 - User review of HTML via Puppeteer/port forwarding
-- Git init, initial commit, and push after approval
-- Configure GitHub secrets (VPS_HOST, VPS_USER, VPS_SSH_KEY)
 - Set up Nginx Proxy Manager upstream for artdraft_website container
