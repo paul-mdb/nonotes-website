@@ -25,8 +25,11 @@
     <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/40 via-gray-950 to-purple-900/30"></div>
     <nav class="relative z-10 max-w-6xl mx-auto flex items-center justify-between px-6 py-6">
       <span class="text-2xl font-bold tracking-tight text-white">No<span class="text-indigo-400">Notes</span></span>
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-3">
         <a href="#privacy" class="text-sm text-gray-400 hover:text-white transition" data-i18n="nav_privacy">Privacy Policy</a>
+        <a href="https://nonotes.seventhproof.com"
+           class="text-sm bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-4 py-1.5 rounded-lg transition"
+           data-i18n="nav_app">Try NoNotes</a>
         <button id="lang-toggle" class="text-sm text-gray-400 hover:text-white transition border border-gray-700 rounded-md px-2.5 py-1">FR</button>
       </div>
     </nav>
@@ -130,6 +133,7 @@
     const translations = {
       en: {
         nav_privacy: "Privacy Policy",
+        nav_app: "Try NoNotes",
         hero_title_1: "Capture ideas",
         hero_title_2: "before they fade.",
         hero_desc: "NoNotes is a note-taking app designed to capture ideas instantly and organize them effortlessly. From fleeting thoughts to full plans — all in one place.",
@@ -160,6 +164,7 @@
       },
       fr: {
         nav_privacy: "Politique de confidentialité",
+        nav_app: "Essayer NoNotes",
         hero_title_1: "Capturez vos idées",
         hero_title_2: "avant qu'elles ne s'effacent.",
         hero_desc: "NoNotes est une application de prise de notes conçue pour capturer vos idées instantanément et les organiser sans effort. Des pensées fugaces aux plans complets — tout au même endroit.",
