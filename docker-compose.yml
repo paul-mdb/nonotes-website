@@ -1,7 +1,7 @@
 services:
   web:
     build: .
-    container_name: artdraft_website
+    container_name: nonotes_website
     expose:
       - "80"
     restart: unless-stopped

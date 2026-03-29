@@ -3,8 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ArtDraft - Capture Ideas Instantly</title>
-  <meta name="description" content="ArtDraft is a note-taking app designed to capture ideas instantly and organize them effortlessly." />
+  <title>NoNotes - Capture Ideas Instantly</title>
+  <meta name="description" content="NoNotes is a note-taking app designed to capture ideas instantly and organize them effortlessly." />
+  <meta property="og:title" content="NoNotes - Capture Ideas Instantly" />
+  <meta property="og:description" content="NoNotes is a note-taking app designed to capture ideas instantly and organize them effortlessly." />
+  <meta property="og:url" content="https://nonotes.seventhproof.com" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="NoNotes - Capture Ideas Instantly" />
+  <meta name="twitter:description" content="NoNotes is a note-taking app designed to capture ideas instantly and organize them effortlessly." />
+  <link rel="canonical" href="https://nonotes.seventhproof.com" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html { scroll-behavior: smooth; }
@@ -16,22 +24,27 @@
   <header class="relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/40 via-gray-950 to-purple-900/30"></div>
     <nav class="relative z-10 max-w-6xl mx-auto flex items-center justify-between px-6 py-6">
-      <span class="text-2xl font-bold tracking-tight text-white">Art<span class="text-indigo-400">Draft</span></span>
-      <a href="#privacy" class="text-sm text-gray-400 hover:text-white transition">Privacy Policy</a>
+      <span class="text-2xl font-bold tracking-tight text-white">No<span class="text-indigo-400">Notes</span></span>
+      <div class="flex items-center gap-4">
+        <a href="#privacy" class="text-sm text-gray-400 hover:text-white transition" data-i18n="nav_privacy">Privacy Policy</a>
+        <button id="lang-toggle" class="text-sm text-gray-400 hover:text-white transition border border-gray-700 rounded-md px-2.5 py-1">FR</button>
+      </div>
     </nav>
     <div class="relative z-10 max-w-3xl mx-auto text-center px-6 pt-20 pb-32">
       <h1 class="text-5xl sm:text-6xl font-extrabold leading-tight tracking-tight">
-        Capture ideas<br class="hidden sm:block" />
-        <span class="text-indigo-400">before they fade.</span>
+        <span data-i18n="hero_title_1">Capture ideas</span><br class="hidden sm:block" />
+        <span class="text-indigo-400" data-i18n="hero_title_2">before they fade.</span>
       </h1>
-      <p class="mt-6 text-lg sm:text-xl text-gray-400 max-w-xl mx-auto">
-        ArtDraft is a note-taking app designed to capture ideas instantly and organize them effortlessly. From fleeting thoughts to full plans — all in one place.
+      <p class="mt-6 text-lg sm:text-xl text-gray-400 max-w-xl mx-auto" data-i18n="hero_desc">
+        NoNotes is a note-taking app designed to capture ideas instantly and organize them effortlessly. From fleeting thoughts to full plans — all in one place.
       </p>
-      <div class="mt-10">
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://nonotes.seventhproof.com"
+           class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-8 py-3 rounded-lg transition shadow-lg shadow-indigo-600/20"
+           data-i18n="cta_app">Try NoNotes</a>
         <a href="mailto:contact@seventhproof.com"
-           class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-8 py-3 rounded-lg transition shadow-lg shadow-indigo-600/20">
-          Get in Touch
-        </a>
+           class="inline-block bg-gray-800 hover:bg-gray-700 text-white font-semibold px-8 py-3 rounded-lg transition border border-gray-700"
+           data-i18n="cta_contact">Get in Touch</a>
       </div>
       <p class="mt-4 text-sm text-gray-500">contact@seventhproof.com</p>
     </div>
@@ -39,7 +52,7 @@
 
   <!-- Features -->
   <section class="max-w-6xl mx-auto px-6 py-24">
-    <h2 class="text-3xl font-bold text-center mb-16">Why ArtDraft?</h2>
+    <h2 class="text-3xl font-bold text-center mb-16" data-i18n="features_title">Why NoNotes?</h2>
     <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
       <div class="bg-gray-900 rounded-2xl p-8 border border-gray-800">
         <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-indigo-600/20 text-indigo-400 mb-5">
@@ -47,8 +60,8 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
         </div>
-        <h3 class="text-xl font-semibold mb-2">Instant Capture</h3>
-        <p class="text-gray-400">Open the app and start typing. No friction, no setup — just pure speed when inspiration strikes.</p>
+        <h3 class="text-xl font-semibold mb-2" data-i18n="feat1_title">Instant Capture</h3>
+        <p class="text-gray-400" data-i18n="feat1_desc">Open the app and start typing. No friction, no setup — just pure speed when inspiration strikes.</p>
       </div>
       <div class="bg-gray-900 rounded-2xl p-8 border border-gray-800">
         <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-purple-600/20 text-purple-400 mb-5">
@@ -56,8 +69,8 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
           </svg>
         </div>
-        <h3 class="text-xl font-semibold mb-2">Effortless Organization</h3>
-        <p class="text-gray-400">Tag, sort, and find your notes without thinking about folder structures. Your ideas, always within reach.</p>
+        <h3 class="text-xl font-semibold mb-2" data-i18n="feat2_title">Effortless Organization</h3>
+        <p class="text-gray-400" data-i18n="feat2_desc">Tag, sort, and find your notes without thinking about folder structures. Your ideas, always within reach.</p>
       </div>
       <div class="bg-gray-900 rounded-2xl p-8 border border-gray-800 sm:col-span-2 lg:col-span-1">
         <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-teal-600/20 text-teal-400 mb-5">
@@ -65,8 +78,8 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
           </svg>
         </div>
-        <h3 class="text-xl font-semibold mb-2">Private by Design</h3>
-        <p class="text-gray-400">Your notes are yours. No ads, no data selling — just a clean, secure space for your thoughts.</p>
+        <h3 class="text-xl font-semibold mb-2" data-i18n="feat3_title">Private by Design</h3>
+        <p class="text-gray-400" data-i18n="feat3_desc">Your notes are yours. No ads, no data selling — just a clean, secure space for your thoughts.</p>
       </div>
     </div>
   </section>
@@ -74,33 +87,33 @@
   <!-- Privacy Policy -->
   <section id="privacy" class="bg-gray-900/50 border-t border-gray-800">
     <div class="max-w-3xl mx-auto px-6 py-24">
-      <h2 class="text-3xl font-bold mb-8">Privacy Policy</h2>
+      <h2 class="text-3xl font-bold mb-8" data-i18n="privacy_title">Privacy Policy</h2>
       <div class="space-y-6 text-gray-400 leading-relaxed">
-        <p>Last updated: March 27, 2026</p>
+        <p data-i18n="privacy_updated">Last updated: March 27, 2026</p>
 
-        <h3 class="text-lg font-semibold text-gray-200">What We Collect</h3>
-        <p>We collect only the minimum data required to provide our service:</p>
+        <h3 class="text-lg font-semibold text-gray-200" data-i18n="privacy_collect_title">What We Collect</h3>
+        <p data-i18n="privacy_collect_desc">We collect only the minimum data required to provide our service:</p>
         <ul class="list-disc list-inside space-y-1 ml-2">
-          <li><strong class="text-gray-300">Email address</strong> — used solely for account creation and authentication.</li>
-          <li><strong class="text-gray-300">Note content</strong> — stored securely to enable sync across your devices.</li>
+          <li data-i18n-html="privacy_collect_email"><strong class="text-gray-300">Email address</strong> — used solely for account creation and authentication.</li>
+          <li data-i18n-html="privacy_collect_notes"><strong class="text-gray-300">Note content</strong> — stored securely to enable sync across your devices.</li>
         </ul>
 
-        <h3 class="text-lg font-semibold text-gray-200">What We Don't Do</h3>
+        <h3 class="text-lg font-semibold text-gray-200" data-i18n="privacy_dont_title">What We Don't Do</h3>
         <ul class="list-disc list-inside space-y-1 ml-2">
-          <li>We <strong class="text-gray-300">do not sell</strong> your personal data to third parties.</li>
-          <li>We <strong class="text-gray-300">do not display ads</strong> or use your data for advertising purposes.</li>
-          <li>We <strong class="text-gray-300">do not share</strong> your note content with anyone.</li>
+          <li data-i18n-html="privacy_dont_sell"><strong class="text-gray-300">do not sell</strong> your personal data to third parties.</li>
+          <li data-i18n-html="privacy_dont_ads"><strong class="text-gray-300">do not display ads</strong> or use your data for advertising purposes.</li>
+          <li data-i18n-html="privacy_dont_share"><strong class="text-gray-300">do not share</strong> your note content with anyone.</li>
         </ul>
 
-        <h3 class="text-lg font-semibold text-gray-200">Account Deletion</h3>
-        <p>
+        <h3 class="text-lg font-semibold text-gray-200" data-i18n="privacy_delete_title">Account Deletion</h3>
+        <p data-i18n-html="privacy_delete_desc">
           You may request full deletion of your account and all associated data at any time by contacting us at
           <a href="mailto:contact@seventhproof.com" class="text-indigo-400 hover:underline">contact@seventhproof.com</a>.
           We will process your request promptly.
         </p>
 
-        <h3 class="text-lg font-semibold text-gray-200">Contact</h3>
-        <p>
+        <h3 class="text-lg font-semibold text-gray-200" data-i18n="privacy_contact_title">Contact</h3>
+        <p data-i18n-html="privacy_contact_desc">
           If you have questions about this policy, reach out to
           <a href="mailto:contact@seventhproof.com" class="text-indigo-400 hover:underline">contact@seventhproof.com</a>.
         </p>
@@ -110,8 +123,115 @@
 
   <!-- Footer -->
   <footer class="border-t border-gray-800 py-8">
-    <p class="text-center text-sm text-gray-600">&copy; 2026 ArtDraft. All rights reserved.</p>
+    <p class="text-center text-sm text-gray-600" data-i18n="footer_copy">&copy; 2026 NoNotes. All rights reserved.</p>
   </footer>
+
+  <script>
+    const translations = {
+      en: {
+        nav_privacy: "Privacy Policy",
+        hero_title_1: "Capture ideas",
+        hero_title_2: "before they fade.",
+        hero_desc: "NoNotes is a note-taking app designed to capture ideas instantly and organize them effortlessly. From fleeting thoughts to full plans — all in one place.",
+        cta_app: "Try NoNotes",
+        cta_contact: "Get in Touch",
+        features_title: "Why NoNotes?",
+        feat1_title: "Instant Capture",
+        feat1_desc: "Open the app and start typing. No friction, no setup — just pure speed when inspiration strikes.",
+        feat2_title: "Effortless Organization",
+        feat2_desc: "Tag, sort, and find your notes without thinking about folder structures. Your ideas, always within reach.",
+        feat3_title: "Private by Design",
+        feat3_desc: "Your notes are yours. No ads, no data selling — just a clean, secure space for your thoughts.",
+        privacy_title: "Privacy Policy",
+        privacy_updated: "Last updated: March 27, 2026",
+        privacy_collect_title: "What We Collect",
+        privacy_collect_desc: "We collect only the minimum data required to provide our service:",
+        privacy_collect_email: '<strong class="text-gray-300">Email address</strong> — used solely for account creation and authentication.',
+        privacy_collect_notes: '<strong class="text-gray-300">Note content</strong> — stored securely to enable sync across your devices.',
+        privacy_dont_title: "What We Don't Do",
+        privacy_dont_sell: 'We <strong class="text-gray-300">do not sell</strong> your personal data to third parties.',
+        privacy_dont_ads: 'We <strong class="text-gray-300">do not display ads</strong> or use your data for advertising purposes.',
+        privacy_dont_share: 'We <strong class="text-gray-300">do not share</strong> your note content with anyone.',
+        privacy_delete_title: "Account Deletion",
+        privacy_delete_desc: 'You may request full deletion of your account and all associated data at any time by contacting us at <a href="mailto:contact@seventhproof.com" class="text-indigo-400 hover:underline">contact@seventhproof.com</a>. We will process your request promptly.',
+        privacy_contact_title: "Contact",
+        privacy_contact_desc: 'If you have questions about this policy, reach out to <a href="mailto:contact@seventhproof.com" class="text-indigo-400 hover:underline">contact@seventhproof.com</a>.',
+        footer_copy: "&copy; 2026 NoNotes. All rights reserved."
+      },
+      fr: {
+        nav_privacy: "Politique de confidentialité",
+        hero_title_1: "Capturez vos idées",
+        hero_title_2: "avant qu'elles ne s'effacent.",
+        hero_desc: "NoNotes est une application de prise de notes conçue pour capturer vos idées instantanément et les organiser sans effort. Des pensées fugaces aux plans complets — tout au même endroit.",
+        cta_app: "Essayer NoNotes",
+        cta_contact: "Nous contacter",
+        features_title: "Pourquoi NoNotes ?",
+        feat1_title: "Capture instantanée",
+        feat1_desc: "Ouvrez l'application et commencez à écrire. Aucune friction, aucune configuration — juste de la rapidité quand l'inspiration frappe.",
+        feat2_title: "Organisation sans effort",
+        feat2_desc: "Étiquetez, triez et retrouvez vos notes sans penser aux arborescences de dossiers. Vos idées, toujours à portée de main.",
+        feat3_title: "Confidentialité intégrée",
+        feat3_desc: "Vos notes vous appartiennent. Pas de publicités, pas de revente de données — juste un espace propre et sécurisé pour vos pensées.",
+        privacy_title: "Politique de confidentialité",
+        privacy_updated: "Dernière mise à jour : 27 mars 2026",
+        privacy_collect_title: "Ce que nous collectons",
+        privacy_collect_desc: "Nous ne collectons que le minimum de données nécessaire au fonctionnement de notre service :",
+        privacy_collect_email: '<strong class="text-gray-300">Adresse e-mail</strong> — utilisée uniquement pour la création de compte et l\'authentification.',
+        privacy_collect_notes: '<strong class="text-gray-300">Contenu des notes</strong> — stocké de manière sécurisée pour permettre la synchronisation entre vos appareils.',
+        privacy_dont_title: "Ce que nous ne faisons pas",
+        privacy_dont_sell: 'Nous <strong class="text-gray-300">ne vendons pas</strong> vos données personnelles à des tiers.',
+        privacy_dont_ads: 'Nous <strong class="text-gray-300">n\'affichons pas de publicités</strong> et n\'utilisons pas vos données à des fins publicitaires.',
+        privacy_dont_share: 'Nous <strong class="text-gray-300">ne partageons pas</strong> le contenu de vos notes avec quiconque.',
+        privacy_delete_title: "Suppression de compte",
+        privacy_delete_desc: 'Vous pouvez demander la suppression complète de votre compte et de toutes les données associées à tout moment en nous contactant à <a href="mailto:contact@seventhproof.com" class="text-indigo-400 hover:underline">contact@seventhproof.com</a>. Nous traiterons votre demande dans les meilleurs délais.',
+        privacy_contact_title: "Contact",
+        privacy_contact_desc: 'Si vous avez des questions concernant cette politique, écrivez-nous à <a href="mailto:contact@seventhproof.com" class="text-indigo-400 hover:underline">contact@seventhproof.com</a>.',
+        footer_copy: "&copy; 2026 NoNotes. Tous droits réservés."
+      }
+    };
+
+    let currentLang = localStorage.getItem("lang") || "en";
+
+    function applyLang(lang) {
+      currentLang = lang;
+      localStorage.setItem("lang", lang);
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang][key]) el.textContent = translations[lang][key];
+      });
+      document.querySelectorAll("[data-i18n-html]").forEach(el => {
+        const key = el.getAttribute("data-i18n-html");
+        if (translations[lang][key]) el.innerHTML = translations[lang][key];
+      });
+
+      // Update meta tags
+      if (lang === "fr") {
+        document.title = "NoNotes - Capturez vos idées instantanément";
+        document.querySelector('meta[name="description"]').content = "NoNotes est une application de prise de notes conçue pour capturer vos idées instantanément et les organiser sans effort.";
+        document.querySelector('meta[property="og:title"]').content = "NoNotes - Capturez vos idées instantanément";
+        document.querySelector('meta[property="og:description"]').content = "NoNotes est une application de prise de notes conçue pour capturer vos idées instantanément et les organiser sans effort.";
+        document.querySelector('meta[name="twitter:title"]').content = "NoNotes - Capturez vos idées instantanément";
+        document.querySelector('meta[name="twitter:description"]').content = "NoNotes est une application de prise de notes conçue pour capturer vos idées instantanément et les organiser sans effort.";
+      } else {
+        document.title = "NoNotes - Capture Ideas Instantly";
+        document.querySelector('meta[name="description"]').content = "NoNotes is a note-taking app designed to capture ideas instantly and organize them effortlessly.";
+        document.querySelector('meta[property="og:title"]').content = "NoNotes - Capture Ideas Instantly";
+        document.querySelector('meta[property="og:description"]').content = "NoNotes is a note-taking app designed to capture ideas instantly and organize them effortlessly.";
+        document.querySelector('meta[name="twitter:title"]').content = "NoNotes - Capture Ideas Instantly";
+        document.querySelector('meta[name="twitter:description"]').content = "NoNotes is a note-taking app designed to capture ideas instantly and organize them effortlessly.";
+      }
+
+      document.getElementById("lang-toggle").textContent = lang === "en" ? "FR" : "EN";
+    }
+
+    document.getElementById("lang-toggle").addEventListener("click", () => {
+      applyLang(currentLang === "en" ? "fr" : "en");
+    });
+
+    applyLang(currentLang);
+  </script>
 
 </body>
 </html>

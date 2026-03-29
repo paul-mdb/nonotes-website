@@ -60,10 +60,10 @@ Your typical loop:
 #  CURRENT PROJECT STATE
 *(Claude, you must update this section continuously as the project evolves. Keep it concise but comprehensive).*
 
-**Project Description:** Static landing page for ArtDraft, a mobile note-taking app. Serves as the public-facing website with app info and a privacy policy.
+**Project Description:** Static landing page for NoNotes, a mobile note-taking app. Serves as the public-facing website with app info and a privacy policy.
 
 **Tech Stack:**
-- HTML + Tailwind CSS (via CDN)
+- HTML + Tailwind CSS (via CDN) with JavaScript i18n (EN/FR)
 - Nginx Alpine (Docker)
 - GitHub Actions CI/CD
 
@@ -73,7 +73,10 @@ Your typical loop:
 - Lightweight Dockerfile (nginx:alpine)
 - Dev compose (port 8080) and prod compose (proxy_network, no host ports)
 - CI/CD pipeline (test + deploy jobs)
+- Bilingual support (English/French) with language switcher
+- Dual CTA buttons (Try NoNotes + Get in Touch)
+- SEO meta tags, Open Graph, and Twitter Card tags
 
 **Next Steps / TODO:**
 - User review of HTML via Puppeteer/port forwarding
-- Set up Nginx Proxy Manager upstream for artdraft_website container
+- Set up Nginx Proxy Manager upstream for nonotes_website container

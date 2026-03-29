@@ -1,4 +1,4 @@
-name: Deploy ArtDraft Website
+name: Deploy NoNotes Website
 
 on:
   push:
@@ -11,12 +11,12 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Build Docker image
-        run: docker build -t artdraft-website-test .
+        run: docker build -t nonotes-website-test .
 
       - name: Verify nginx config and HTML
         run: |
-          docker run --rm artdraft-website-test nginx -t
-          docker run --rm artdraft-website-test test -f /usr/share/nginx/html/index.html
+          docker run --rm nonotes-website-test nginx -t
+          docker run --rm nonotes-website-test test -f /usr/share/nginx/html/index.html
 
   deploy:
     needs: test
@@ -29,6 +29,6 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            cd ~/production/artdraft-website
+            cd ~/production/website-nonotes
             git pull origin main
             docker compose up -d --build
